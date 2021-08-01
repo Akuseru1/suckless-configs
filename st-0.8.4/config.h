@@ -121,28 +121,59 @@ float alpha = 1, alphaUnfocused = 0.46;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-    "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
+    // DEFAULT
+	/* /1* 8 normal colors *1/ */
+	/* "black", */
+	/* "red3", */
+	/* "green3", */
+	/* "yellow3", */
+	/* "blue2", */
+	/* "magenta3", */
+	/* "cyan3", */
+	/* "gray90", */
+
+	/* /1* 8 bright colors *1/ */
+	/* "gray50", */
+	/* "red", */
+	/* "green", */
+	/* "yellow", */
+	/* "#5c5cff", */
+	/* "magenta", */
+	/* "cyan", */
+	/* "white", */
+    /* [255] = 0, */
+	/* /1* more colors can be added after 255 to use with DefaultXX *1/ */
+	/* "#cccccc", */
+	/* "#555555", */
+
+    // GRUVBOX
+    [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+    [1] = "#cc241d", /* red     */
+    /* [2] = "#98971a", /1* green   *1/ // terminal color (original gruvbox)*/
+    [2] = "#1e7f76", /* green   */ // terminal color
+    [3] = "#d79921", /* yellow  */
+    [4] = "#458588", /* blue    */
+    [5] = "#b16286", /* magenta */
+    [6] = "#689d6a", /* cyan    */
+    [7] = "#a89984", /* white   */
+
+    /* 8 bright colors */
+    /* [8]  = "#928374", /1* black autocomplete colors bash (original gruvbox)  *1/ */
+    [8]  = "#95b6da", /* black   */
+    [9]  = "#fb4934", /* red     */
+    [10] = "#b8bb26", /* green   */
+    [11] = "#fabd2f", /* yellow  */
+    /* [12] = "#83a598", /1* blue    *1/  // directory colors (original gruvbox) */
+    [12] = "#639cd5", /* blue    */  // directory colors
+    [13] = "#d3869b", /* magenta */
+    [14] = "#8ec07c", /* cyan    */
+    [15] = "#ebdbb2", /* white  */
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#add8e6", /* 256 -> cursor */
-	"#555555", /* 257 -> rev cursor*/
-	"#282828", /* 258 -> bg */
-	"#ebdbb2", /* 259 -> fg */
+	[256] = "#add8e6", /* 256 -> cursor */
+	[257] = "#555555", /* 257 -> rev cursor*/
+	[258] = "#282828", /* 258 -> bg */
+	[259] = "#ebdbb2", /* 259 -> fg */
 };
 
 
@@ -196,37 +227,39 @@ static uint forcemousemod = ShiftMask;
 /*
  * Xresources preferences to load at startup
  */
+
+// to enable pywal just uncomment these
 ResourcePref resources[] = {
-        { "font",         STRING,  &font },
-        { "color0",       STRING,  &colorname[0] },
-        { "color1",       STRING,  &colorname[1] },
-        { "color2",       STRING,  &colorname[2] },
-        { "color3",       STRING,  &colorname[3] },
-        { "color4",       STRING,  &colorname[4] },
-        { "color5",       STRING,  &colorname[5] },
-        { "color6",       STRING,  &colorname[6] },
-        { "color7",       STRING,  &colorname[7] },
-        { "color8",       STRING,  &colorname[8] },
-        { "color9",       STRING,  &colorname[9] }, // this is the text in the prompt
-        { "color10",      STRING,  &colorname[10] },
-        { "color11",      STRING,  &colorname[11] },
-        { "color12",      STRING,  &colorname[12] },
-        { "color13",      STRING,  &colorname[13] },
-        { "color14",      STRING,  &colorname[14] },
-        { "color15",      STRING,  &colorname[15] },
-        { "background",   STRING,  &colorname[258] },
-        { "foreground",   STRING,  &colorname[259] },
-        { "cursorColor",  STRING,  &colorname[256] },
-        { "termname",     STRING,  &termname },
-        { "shell",        STRING,  &shell },
-        { "minlatency",   INTEGER, &minlatency },
-        { "maxlatency",   INTEGER, &maxlatency },
-        { "blinktimeout", INTEGER, &blinktimeout },
-        { "bellvolume",   INTEGER, &bellvolume },
-        { "tabspaces",    INTEGER, &tabspaces },
-        { "borderpx",     INTEGER, &borderpx },
-        { "cwscale",      FLOAT,   &cwscale },
-        { "chscale",      FLOAT,   &chscale },
+/*         { "font",         STRING,  &font }, */
+/*         { "color0",       STRING,  &colorname[0] }, */
+/*         { "color1",       STRING,  &colorname[1] }, */
+/*         { "color2",       STRING,  &colorname[2] }, */
+/*         { "color3",       STRING,  &colorname[3] }, */
+/*         { "color4",       STRING,  &colorname[4] }, */
+/*         { "color5",       STRING,  &colorname[5] }, */
+/*         { "color6",       STRING,  &colorname[6] }, */
+/*         { "color7",       STRING,  &colorname[7] }, */
+/*         { "color8",       STRING,  &colorname[8] }, */
+/*         { "color9",       STRING,  &colorname[9] }, // this is the text in the prompt */
+/*         { "color10",      STRING,  &colorname[10] }, */
+/*         { "color11",      STRING,  &colorname[11] }, */
+/*         { "color12",      STRING,  &colorname[12] }, */
+/*         { "color13",      STRING,  &colorname[13] }, */
+/*         { "color14",      STRING,  &colorname[14] }, */
+/*         { "color15",      STRING,  &colorname[15] }, */
+/*         { "background",   STRING,  &colorname[258] }, */
+/*         { "foreground",   STRING,  &colorname[259] }, */
+/*         { "cursorColor",  STRING,  &colorname[256] }, */
+/*         { "termname",     STRING,  &termname }, */
+/*         { "shell",        STRING,  &shell }, */
+/*         { "minlatency",   INTEGER, &minlatency }, */
+/*         { "maxlatency",   INTEGER, &maxlatency }, */
+/*         { "blinktimeout", INTEGER, &blinktimeout }, */
+/*         { "bellvolume",   INTEGER, &bellvolume }, */
+/*         { "tabspaces",    INTEGER, &tabspaces }, */
+/*         { "borderpx",     INTEGER, &borderpx }, */
+/*         { "cwscale",      FLOAT,   &cwscale }, */
+/*         { "chscale",      FLOAT,   &chscale }, */
         { "alpha",        FLOAT,   &alpha },
 };
 
