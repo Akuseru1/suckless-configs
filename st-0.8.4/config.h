@@ -148,14 +148,17 @@ static const char *colorname[] = {
 
     // GRUVBOX
     [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-    [1] = "#cc241d", /* red     */
-    /* [2] = "#98971a", /1* green   *1/ // terminal color (original gruvbox)*/
-    [2] = "#1e7f76", /* green   */ // terminal color
+    /* [1] = "#cc241d", /1* red stdout (using color) (original gruvbox)    *1/ */
+    [1] = "#689d6a", /* stdout (using color)    */
+    /* [2] = "#98971a", /1* green   *1/ // terminal command color (original gruvbox)*/
+    [2] = "#1e7f76",  // terminal command color
     [3] = "#d79921", /* yellow  */
     [4] = "#458588", /* blue    */
     [5] = "#b16286", /* magenta */
-    [6] = "#689d6a", /* cyan    */
-    [7] = "#a89984", /* white   */
+    /* [6] = "#689d6a", /1* cyan stderr (using color) (original gruvbox)   *1/ */
+    [6] = "#cc241d", /* cyan stderr (using color)    */
+    /* [7] = "#a89984", /1* white search background (using less)  (original gruvbox) *1/ */
+    [7] = "#ebdbb2", /* white search background (using less)   */
 
     /* 8 bright colors */
     /* [8]  = "#928374", /1* black autocomplete colors bash (original gruvbox)  *1/ */
@@ -164,7 +167,7 @@ static const char *colorname[] = {
     [10] = "#b8bb26", /* green   */
     [11] = "#fabd2f", /* yellow  */
     /* [12] = "#83a598", /1* blue    *1/  // directory colors (original gruvbox) */
-    [12] = "#639cd5", /* blue    */  // directory colors
+    [12] = "#639cd5", /* blue    */  // directory colors and search color text (using less)
     [13] = "#d3869b", /* magenta */
     [14] = "#8ec07c", /* cyan    */
     [15] = "#ebdbb2", /* white  */
@@ -173,7 +176,8 @@ static const char *colorname[] = {
 	[256] = "#add8e6", /* 256 -> cursor */
 	[257] = "#555555", /* 257 -> rev cursor*/
 	[258] = "#282828", /* 258 -> bg */
-	[259] = "#ebdbb2", /* 259 -> fg */
+	/* [259] = "#ebdbb2", /1* 259 -> fg *1/ // files color (original gruvbox) */
+	[259] = "#FFFFFF", /* 259 -> fg */
 };
 
 
