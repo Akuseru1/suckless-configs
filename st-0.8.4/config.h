@@ -10,9 +10,10 @@ static char *font = "VictorMono Nerd Font:size=10:antialias=true:autohint=true";
 
 /* Spare fonts */
 static char *font2[] = {
+
     "Liberation Mono:pixelsize=8:antialias=true:autohint=true", // for fzf lines
     "Noto Sans Emoji:pixelsize=8:antialias=true:autohint=true", // Unicode (emojis)
-    "Droid Sans Japanese:pixelsize=8:antialias=true:autohint=true", // Japanese
+    "Droid Sans Japanese:pixelsize=10:antialias=true:autohint=true", // Japanese
 };
 
 
