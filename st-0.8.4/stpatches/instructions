@@ -1,0 +1,2 @@
+add first 5 patches, remove hb.c and hb.h and replace them with the already patched ones in the fully working commit
+
