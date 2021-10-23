@@ -13,8 +13,9 @@ static int topbar             = 1;        /* 0 means bottom bar */
 static int floatposgrid_x           = 5;        /* float grid columns */
 static int floatposgrid_y           = 5;        /* float grid rows */
 static const char *fonts[]          = {
-    /* "Hack Nerd Font Mono:pixelsize=14:antialias=true:autohint=true", // Powerline */
-    "Noto Sans Emoji:pixelsize=14:antialias=true:autohint=true", // Unicode (emojis)
+    "NotoColorEmoji:pixelsize=11:antialias=true:autohint=true", // Unicode (emojis)
+    "JoyPixels:pixelsize=10:antialias=true:autohint=true",
+    /* "Noto Sans Emoji:pixelsize=14:antialias=true:autohint=true", // Unicode (emojis) */
     /* "Symbola:pixelsize=14:antialias=true:autohint=true", // Unicode (emojis) */
 	"monospace:size=10"
  };
