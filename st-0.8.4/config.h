@@ -20,7 +20,8 @@ static char *font = "VictorMono Nerd Font:size=10:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
 	"monospace:size=10",
-    "JoyPixels:pixelsize=14:antialias=true:autohint=true", //not working in solus
+    "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true", // Unicode (emojis)
+    "JoyPixels:pixelsize=10:antialias=true:autohint=true", //not working in solus
     /* "Liberation Mono:pixelsize=8:antialias=true:autohint=true", // for fzf lines */
     /* "Noto Sans Emoji:pixelsize=8:antialias=true:autohint=true", // Unicode (emojis) */
     /* "Droid Sans Japanese:pixelsize=8:antialias=true:autohint=true", // Japanese */
