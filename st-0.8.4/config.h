@@ -5,23 +5,20 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-//static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-//static char *font = "Mono:pixelsize=12:antialias=true:autohint=true";
-//
-// current
-/* static char *font = "Fira Code:size=10:antialias=true:autohint=true"; */
-/* static char *font = "FiraCode Nerd Font:size=11:antialias=true:autohint=true"; */
-static char *font = "VictorMono Nerd Font:size=10:antialias=true:autohint=true";
-/* static char *font = "FiraCode Nerd Font Mono:size=11:antialias=true:autohint=true"; */
-/* static char *font = "monospace:pixelsize=15:antialias=true:autohint=true"; */
-/* static char *font = "Source Code Pro:pixelsize=14:antialias=true:autohint=true"; // Unicode (emojis) */
-;
-/* static char *font = "mono:size=10:antialias=true:autohint=true"; */
-/* Spare fonts */
+
+/* static char *font = "VictorMono Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
+/* static char *font = "CaskaydiaCove Nerd Font Mono:pixelsize=10:antialias=true:autohint=true"; */
+/* static char *font = "Hasklug Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
+static char *font = "DaddyTimeMono Nerd Font Mono:pixelsize=14:antialias=true:autohint=true";
+/* static char *font = "Inconsolata Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
+/* static char *font = "Iosevka Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
+/* static char *font = "Monoid Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
+/* static char *font = "Terminus Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
 static char *font2[] = {
-	"monospace:size=10",
     "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true", // Unicode (emojis)
-    "JoyPixels:pixelsize=10:antialias=true:autohint=true", //not working in solus
+    "JoyPixels:pixelsize=12:antialias=true:autohint=true",
+	"monospace:pixelsize=12",
+
     /* "Liberation Mono:pixelsize=8:antialias=true:autohint=true", // for fzf lines */
     /* "Noto Sans Emoji:pixelsize=8:antialias=true:autohint=true", // Unicode (emojis) */
     /* "Droid Sans Japanese:pixelsize=8:antialias=true:autohint=true", // Japanese */
@@ -135,7 +132,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 1, alphaUnfocused = 0.46;
+float alpha = 1, alphaUnfocused = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
