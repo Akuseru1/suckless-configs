@@ -88,13 +88,20 @@ static const Rule rules[] = {
 /* layout(s) */                                             //this allows swallowing(is terminal)
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor     floatpos     */
 	/* { "Gimp",    NULL,   NULL,           0,           1,          0,           0,        -1,       0 }, */
-	{ "firefox",  NULL,     NULL,           1 << 8,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
-	{ "Brave-browser",  NULL,     NULL,           1 << 8,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
+	{ "Brave-browser",  NULL,     NULL,     1 << 8,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
+	{ "chromium",       NULL,     NULL,     1 << 8,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
+	{ "DBeaver",        NULL,     NULL,     1 << 1,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
+	{ "robo3t",        NULL,     NULL,     1 << 1,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
+	{ "Microsoft Teams - Preview",NULL,NULL,1 << 5,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
+	{ "Slack",NULL,NULL,1 << 5,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
+	{ "Insomnia",NULL,NULL,1 << 1,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
+	{ "postman",NULL,NULL,1 << 1,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
+	{ "firefox",  NULL,     NULL,           1 << 3,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
+	{ "discord",  NULL,     NULL,           1 << 5,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
 	{ "Code",     NULL,     NULL,           1 << 2,      0,          0,           0,        -1,  "50% 50% 800W 800H"    },
 	{ "St",       NULL,     NULL,              0,        0,          1,           0,        -1,  "50% 50% 800W 800H"    },
 	{ "Station",  NULL,     NULL,           1 << 0,      0,          0,           0,        -1,  "50% 50% 800W 800H"     },
 	{ "meh",      NULL,     NULL,           0,           1,          1,           1,        -1,  "100% 100% 100W 700H"   },
-	{ "copyq",    NULL,     NULL,	        0,	         1,		     0,           1,        -1,  "20% 20% 500W 500H"      },
 	{ NULL,       NULL,     "Event Tester", 0,           0,          0,           1,        -1,  "50% 50% 800W 800H"     },
 	{ NULL,		  "spterm",		NULL,	SPTAG(0),	     1,		     1,           0,        -1,  "50% 50% 800W 500H"      },
 	{ NULL,		  "spfm",		NULL,	SPTAG(1),	     1,		     1,           0,        -1,  "0% 0% 500W 500H"      },

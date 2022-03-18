@@ -135,85 +135,47 @@ unsigned int tabspaces = 8;
 float alpha = 1, alphaUnfocused = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
-    // DEFAULT
-	/* /1* 8 normal colors *1/ */
-	/* "black", */
-	/* "red3", */
-	/* "green3", */
-	/* "yellow3", */
-	/* "blue2", */
-	/* "magenta3", */
-	/* "cyan3", */
-	/* "gray90", */
-
-	/* /1* 8 bright colors *1/ */
-	/* "gray50", */
-	/* "red", */
-	/* "green", */
-	/* "yellow", */
-	/* "#5c5cff", */
-	/* "magenta", */
-	/* "cyan", */
-	/* "white", */
-    /* [255] = 0, */
-	/* /1* more colors can be added after 255 to use with DefaultXX *1/ */
-	/* "#cccccc", */
-	/* "#555555", */
-
-// GRUVBOX ORIGINALS
-    /* [1] = "#cc241d", /1* red stdout (using color) (original gruvbox)    *1/ */
-    /* [2] = "#98971a", /1* green   *1/ // terminal command color (original gruvbox)*/
-    /* [6] = "#689d6a", /1* cyan stderr (using color) (original gruvbox)   *1/ */
-    /* [7] = "#a89984", /1* white search background (using less)  (original gruvbox) *1/ */
-    /* [8]  = "#928374", /1* black autocomplete colors bash (original gruvbox)  *1/ */
-    /* [12] = "#83a598", /1* blue    *1/  // directory colors (original gruvbox) */
-	/* [259] = "#ebdbb2", /1* 259 -> fg *1/ // files color (original gruvbox) */
-
-    // GRUVBOX
-    [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-    [1] = "#689d6a", /* stdout (using color)    */
-    [2] = "#1e7f76",  // terminal command color
-    [3] = "#d79921", /* yellow  */
-    [4] = "#458588", /* blue    */
-    [5] = "#b16286", /* magenta */
-    [6] = "#cc241d", /* cyan stderr (using color)    */
-    [7] = "#ebdbb2", /* white search background (using less)   */
-
-    /* 8 bright colors */
-    [8]  = "#95b6da", /* black   */
-    [9]  = "#fb4934", /* red     */
-    [10] = "#b8bb26", /* green   */
-    [11] = "#fabd2f", /* yellow  */
-    [12] = "#639cd5", /* blue    */  // directory colors and search color text (using less)
-    [13] = "#d3869b", /* magenta */
-    [14] = "#8ec07c", /* cyan    */
-    [15] = "#ebdbb2", /* white  */
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	[256] = "#add8e6", /* 256 -> cursor */
-	[257] = "#555555", /* 257 -> rev cursor*/
-	[258] = "#282828", /* 258 -> bg */
-	[259] = "#FFFFFF", /* 259 -> fg */
-
-};
 
 
-/*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
+#include "/home/kanon/.cache/wal/colors-wal-st.h"
+// simply uncomment colorname and the 4 lines under (defaultbg etc) if you want defaults
 
-// defaults
-/* unsigned int defaultfg = 7; */
-/* unsigned int defaultbg = 0; */
-/* static unsigned int defaultcs = 256; */
-/* static unsigned int defaultrcs = 257; */
+// static const char *colorname[] = {
+//     // GRUVBOX
+//     [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+//     [1] = "#689d6a", /* stdout (using color)    */
+//     [2] = "#1e7f76",  // terminal command color
+//     [3] = "#d79921", /* yellow  */
+//     [4] = "#458588", /* blue    */
+//     [5] = "#b16286", /* magenta */
+//     [6] = "#cc241d", /* cyan stderr (using color)    */
+//     [7] = "#ebdbb2", /* white search background (using less)   */
+//
+//     /* 8 bright colors */
+//     [8]  = "#95b6da", /* black   */
+//     [9]  = "#fb4934", /* red     */
+//     [10] = "#b8bb26", /* green   */
+//     [11] = "#fabd2f", /* yellow  */
+//     [12] = "#639cd5", /* blue    */  // directory colors and search color text (using less)
+//     [13] = "#d3869b", /* magenta */
+//     [14] = "#8ec07c", /* cyan    */
+//     [15] = "#ebdbb2", /* white  */
+// 	[255] = 0,
+// 	/* more colors can be added after 255 to use with DefaultXX */
+// 	[256] = "#add8e6", /* 256 -> cursor */
+// 	[257] = "#555555", /* 257 -> rev cursor*/
+// 	[258] = "#282828", /* 258 -> bg */
+// 	[259] = "#FFFFFF", /* 259 -> fg */
+//
+// };
+// unsigned int defaultfg = 259;
+// unsigned int defaultbg = 258;
+// static unsigned int defaultcs = 256;
+// static unsigned int defaultrcs = 257;
 
-unsigned int defaultfg = 259;
-unsigned int defaultbg = 258;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+
+
+
 /* colors for focused and unfocused */
 unsigned int bg = 16, bgUnfocused = 16;
 
@@ -324,20 +286,25 @@ static Shortcut shortcuts[] = {
     { ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
     { ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
     { XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-    { ControlMask|ShiftMask,XK_E,           zoom,           {.f = +1} },
-    { ControlMask|ShiftMask,XK_N,           zoom,           {.f = -1} },
-    { ControlMask|ShiftMask,XK_U,           zoom,           {.f = +2} },
-    { ControlMask|ShiftMask,XK_D,           zoom,           {.f = -2} },
+    // { ControlMask|ShiftMask,XK_N,           zoom,           {.f = -1} },
+    { ShiftMask,            XK_Prior,           zoom,           {.f = +1} },
+    { ShiftMask,            XK_Next,           zoom,           {.f = -1} },
+    { ShiftMask,            XK_Insert,           zoom,           {.f = +2} },
+    { ShiftMask,            XK_Help,           zoom,           {.f = -2} },
     { TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
     { MODKEY,               XK_c,           clipcopy,       {.i =  0} },
     { MODKEY,               XK_v,           clippaste,      {.i =  0} },
     { TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
     { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
     { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-    { MODKEY|ShiftMask,     XK_E,           kscrollup,      {.i =  1} },
-    { MODKEY|ShiftMask,     XK_N,           kscrolldown,    {.i =  1} },
-    { MODKEY|ShiftMask,     XK_U,           kscrollup,      {.i = -1} },
-    { MODKEY|ShiftMask,     XK_D,           kscrolldown,    {.i = -1} },
+    { XK_NO_MOD,                 XK_Prior,       kscrollup,      {.i =  1} },
+    { XK_NO_MOD,                 XK_Next,        kscrolldown,    {.i =  1} },
+    { XK_NO_MOD,                 XK_Insert,      kscrollup,      {.i = -1} },
+    { XK_NO_MOD,                 XK_Help,        kscrolldown,    {.i = -1} },
+    // { ShiftMask,            Home, XK_Up,           kscrollup,      {.i =  1} },
+    // { ShiftMask,            XK_Down,           kscrolldown,    {.i =  1} },
+    // { ShiftMask,            XK_F8,           kscrollup,      {.i = -1} },
+    // { ShiftMask,            XK_VOLU,           kscrolldown,    {.i = -1} },
     { MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
     { MODKEY|ShiftMask,     XK_L,           externalpipe,   {.v = copyurlcmd } },
     { MODKEY,               XK_y,           externalpipe,   {.v = copyoutput } },
