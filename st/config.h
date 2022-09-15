@@ -140,15 +140,16 @@ float alpha = 0.7, alphaUnfocused = 0.7;
 // #include "/home/jubernal/.cache/wal/colors-wal-st.h"
 // simply uncomment colorname and the 4 lines under (defaultbg etc) if you want defaults
 
+// GRUVBOX
+
 static const char *colorname[] = {
-    // GRUVBOX
     [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-    [1] = "#689d6a", /* stdout (using color)    */
+    [1] = "#cc241d", /* stdout (using color), this should be red, but was  #689d6a */
     [2] = "#1e7f76",  // terminal command color
     [3] = "#d79921", /* yellow  */
     [4] = "#458588", /* blue    */
     [5] = "#b16286", /* magenta */
-    [6] = "#cc241d", /* cyan stderr (using color)    */
+    [6] = "#f44336", /* cyan stderr (using color) this one was wrong in the patch, supposed to be cyan, was #689d6a  */
     [7] = "#ebdbb2", /* white search background (using less)   */
 
     /* 8 bright colors */
@@ -173,6 +174,43 @@ unsigned int defaultbg = 258;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
+
+// // DEFAULT COLORS
+// /* Terminal colors (16 first used in escape sequence) */
+// static const char *colorname[] = {
+// 	/* 8 normal colors */
+// 	"black",
+// 	"red3",
+// 	"green3",
+// 	"yellow3",
+// 	"blue2",
+// 	"magenta3",
+// 	"cyan3",
+// 	"gray90",
+// 	/* 8 bright colors */
+// 	"gray50",
+// 	"red",
+// 	"green",
+// 	"yellow",
+// 	"#5c5cff",
+// 	"magenta",
+// 	"cyan",
+// 	"white",
+// 	[255] = 0,
+// 	/* more colors can be added after 255 to use with DefaultXX */
+// 	"#cccccc",
+// 	"#555555",
+// 	"gray90", /* default foreground colour */
+// 	"black", /* default background colour */
+// };
+// /*
+//  * Default colors (colorname index)
+//  * foreground, background, cursor, reverse cursor
+//  */
+// // unsigned int defaultfg = 258;
+// // unsigned int defaultbg = 259;
+// // unsigned int defaultcs = 256;
+// // static unsigned int defaultrcs = 257;
 
 
 
