@@ -9,7 +9,11 @@
 /* static char *font = "VictorMono Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
 /* static char *font = "CaskaydiaCove Nerd Font Mono:pixelsize=10:antialias=true:autohint=true"; */
 /* static char *font = "Hasklug Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
+
+// default
 static char *font = "DaddyTimeMono Nerd Font Mono:pixelsize=14:antialias=true:autohint=true";
+// static char *font = "Monocraft Nerd Font:pixelsize=15:antialias=true:autohint=true";
+
 /* static char *font = "Inconsolata Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
 /* static char *font = "Iosevka Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
 /* static char *font = "Monoid Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
@@ -347,7 +351,7 @@ static Shortcut shortcuts[] = {
     // { ShiftMask,            XK_VOLU,           kscrolldown,    {.i = -1} },
     { MODKEY,               XK_x,           externalpipe,   {.v = openurlcmd } },
     { MODKEY|ShiftMask,     XK_X,           externalpipe,   {.v = copyurlcmd } },
-    { MODKEY,               XK_y,           externalpipe,   {.v = copyoutput } },
+    { MODKEY|ShiftMask,     XK_Y,           externalpipe,   {.v = copyoutput } },
 };
 
 /*
