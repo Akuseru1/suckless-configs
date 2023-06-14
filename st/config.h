@@ -11,6 +11,7 @@
 /* static char *font = "Hasklug Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
 
 // default
+// static char *font = "ComicShannsMono Nerd Font Mono:pixelsize=14:antialias=true:autohint=true";
 static char *font = "DaddyTimeMono Nerd Font Mono:pixelsize=14:antialias=true:autohint=true";
 // static char *font = "Monocraft Nerd Font:pixelsize=15:antialias=true:autohint=true";
 
@@ -19,19 +20,19 @@ static char *font = "DaddyTimeMono Nerd Font Mono:pixelsize=14:antialias=true:au
 /* static char *font = "Monoid Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
 /* static char *font = "Terminus Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
 static char *font2[] = {
-    "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true", // Unicode (emojis)
-    "JoyPixels:pixelsize=12:antialias=true:autohint=true",
-	"monospace:pixelsize=12",
-
-    /* "Liberation Mono:pixelsize=8:antialias=true:autohint=true", // for fzf lines */
-    /* "Noto Sans Emoji:pixelsize=8:antialias=true:autohint=true", // Unicode (emojis) */
-    /* "Droid Sans Japanese:pixelsize=8:antialias=true:autohint=true", // Japanese */
-
-    /* "Hack Nerd Font Mono:pixelsize=14:antialias=true:autohint=true", // Powerline */
-    /* "Source Code Pro:pixelsize=14:antialias=true:autohint=true", // Unicode (emojis) */
-    /* "Symbola:pixelsize=14:antialias=true:autohint=true", // Unicode (emojis) */
-    /* "Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-    /* "JoyPixels:pixelsize=14:antialias=true:autohint=true" //not working in solus */
+//     "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true", // Unicode (emojis)
+    "JoyPixels:pixelsize=14:antialias=true:autohint=true",
+// 	"monospace:pixelsize=12",
+//
+//     /* "Liberation Mono:pixelsize=8:antialias=true:autohint=true", // for fzf lines */
+//     /* "Noto Sans Emoji:pixelsize=8:antialias=true:autohint=true", // Unicode (emojis) */
+//     /* "Droid Sans Japanese:pixelsize=8:antialias=true:autohint=true", // Japanese */
+//
+//     /* "Hack Nerd Font Mono:pixelsize=14:antialias=true:autohint=true", // Powerline */
+//     /* "Source Code Pro:pixelsize=14:antialias=true:autohint=true", // Unicode (emojis) */
+//     /* "Symbola:pixelsize=14:antialias=true:autohint=true", // Unicode (emojis) */
+//     /* "Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
+//     /* "JoyPixels:pixelsize=14:antialias=true:autohint=true" //not working in solus */
 };
 
 static int borderpx = 2;
