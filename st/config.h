@@ -137,7 +137,12 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.7, alphaUnfocused = 0.7;
+// presentation
+// float alpha = 1, alphaUnfocused = 1;
+// default
+float alpha = 0.7, alphaUnfocused = 0.7; 
+// courses
+// float alpha = 0.3, alphaUnfocused = 0.3;
 
 /* Terminal colors (16 first used in escape sequence) */
 
