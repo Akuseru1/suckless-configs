@@ -154,12 +154,16 @@ float alpha = 0.7, alphaUnfocused = 0.7;
 
 static const char *colorname[] = {
     [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-    [1] = "#cc241d", /* stdout (using color), this should be red, but was  #689d6a */
+
+    [1] = "#fb4934", /* stdout (using color), this should be red, but was  #689d6a */
+
     [2] = "#1e7f76",  // terminal command color
     [3] = "#d79921", /* yellow  */
     [4] = "#458588", /* blue    */
     [5] = "#b16286", /* magenta */
-    [6] = "#f44336", /* cyan stderr (using color) this one was wrong in the patch, supposed to be cyan, was #689d6a  */
+
+    [6] = "#689d6a", /* cyan stderr (using color) this one was wrong in the patch, supposed to be cyan, was #689d6a  */
+
     [7] = "#ebdbb2", /* white search background (using less)   */
 
     /* 8 bright colors */
