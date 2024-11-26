@@ -13,9 +13,10 @@
 // default
 // static char *font = "ComicShannsMono Nerd Font Mono:pixelsize=14:antialias=true:autohint=true";
 static char *font = "DaddyTimeMono Nerd Font Mono:pixelsize=14:antialias=true:autohint=true";
+// static char *font = "CascadiaCode Nerd Font Mono:pixelsize=14:antialias=true:autohint=true";
 // static char *font = "Monocraft Nerd Font:pixelsize=15:antialias=true:autohint=true";
 
-/* static char *font = "Inconsolata Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
+ // static char *font = "Inconsolata Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; 
 /* static char *font = "Iosevka Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
 /* static char *font = "Monoid Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
 /* static char *font = "Terminus Nerd Font Mono:pixelsize=14:antialias=true:autohint=true"; */
@@ -25,7 +26,7 @@ static char *font2[] = {
 // 	"monospace:pixelsize=12",
 //
 //     /* "Liberation Mono:pixelsize=8:antialias=true:autohint=true", // for fzf lines */
-//     /* "Noto Sans Emoji:pixelsize=8:antialias=true:autohint=true", // Unicode (emojis) */
+      // "Noto Sans Emoji:pixelsize=8:antialias=true:autohint=true", // Unicode (emojis) 
 //     /* "Droid Sans Japanese:pixelsize=8:antialias=true:autohint=true", // Japanese */
 //
 //     /* "Hack Nerd Font Mono:pixelsize=14:antialias=true:autohint=true", // Powerline */
